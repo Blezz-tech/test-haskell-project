@@ -2,9 +2,10 @@
   # name = "project-name";
   compiler-nix-name = "ghc9102"; # Version of GHC to use
 
+  # Cross compilation support:
   crossPlatforms = p: pkgs.lib.optionals pkgs.stdenv.hostPlatform.isx86_64 ([
-    p.mingwW64
-    # p.ghcjs # TODO GHCJS support for GHC 9.2
+    # p.mingwW64
+    # p.ghcjs
   ] ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isLinux [
     p.musl64
   ]);
