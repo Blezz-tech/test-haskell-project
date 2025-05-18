@@ -3,7 +3,7 @@ let
   haskellPackages = pkgs.haskellPackages;
 in pkgs.mkShell {
   packages = [
-    # (pkgs.callPackage ./default.nix {})
+    (pkgs.callPackage ./package.nix {})
     haskellPackages.haskell-language-server
     haskellPackages.hlint
     pkgs.ghc
