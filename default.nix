@@ -1,11 +1,5 @@
 let
-  pkgs = import <nixpkgs> {
-    # localSystem = {
-    #   gcc.arch = "alderlake";
-    #   gcc.tune = "alderlake";
-    #   system = "x86_64-linux";
-    # };
-  };
+  pkgs = import <nixpkgs> { };
 in
 pkgs.haskell.packages.ghc9122.developPackage {
   root = ./.;
